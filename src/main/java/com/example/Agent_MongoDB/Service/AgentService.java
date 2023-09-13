@@ -17,11 +17,10 @@ import java.util.stream.Collectors;
 
 @Service
 public class AgentService {
-
     @Autowired private AgentRepository agentRepository;
     @Autowired private ModelMapper modelMapper;
-
     @Autowired private SequenceGeneratorService sequenceGeneratorService;
+
     @Transactional
     public Agent saveAgent(Agent agent) {
         /*if(isTelephoneExists(agent.getTelephone())){

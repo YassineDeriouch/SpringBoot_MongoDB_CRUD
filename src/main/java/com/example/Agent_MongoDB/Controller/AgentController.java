@@ -13,7 +13,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @RestController
-@RequestMapping("GSM/Agent")
+@RequestMapping("Agents")
 @CrossOrigin(value = "*")
 @Tag(name = "Agent", description = "Gestion des Agents")
 @Data
@@ -43,7 +43,7 @@ public class AgentController {
 
     }
     
-    /*@GetMapping("/get/all")
+    @GetMapping("/get/all")
     public ResponseEntity<Iterable<Agent>> getAllAgents() {
         try {
             return new ResponseEntity<>(agentService.getAllAgents(), HttpStatus.OK);
@@ -51,7 +51,7 @@ public class AgentController {
             e.printStackTrace();
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-    }*/
+    }
 
    /*@GetMapping("/get/all/pagination")
    public ResponseEntity<Page<Agent>> getAllAgentsPaging(@RequestParam int nextPage, @RequestParam int pageSize) {
